@@ -1,0 +1,85 @@
+% Custom box definitions
+
+\newtcolorbox{terminalbox}[1][]{
+    colback=black,
+    coltext=white,
+    colframe=gray!50,
+    fontupper=\ttfamily,
+    arc=0pt,
+    boxrule=0.5pt,
+    title=Terminal,
+    titlerule=0pt,
+    coltitle=black,
+    #1
+}
+
+\newtcolorbox{commentbox}[1][]{
+    title=Comments,
+    colback=blue!20,
+    #1
+}
+
+\newtcolorbox{exambox}[1][]{
+    title=Exercice,
+    fonttitle=\bfseries\large,
+    colback=white,
+    colframe=blue!70!black,
+    colbacktitle=blue!10,
+    coltitle=blue!70!black,
+    boxrule=1.5pt,
+    arc=3mm,
+    drop fuzzy shadow=blue!50!black,
+    enhanced,
+    attach boxed title to top left={xshift=5mm,yshift=-3mm},
+    boxed title style={sharp corners,rounded corners=southeast},
+    #1
+}
+
+\newtcolorbox{glassbox}[1][]{
+    title=Exercice,
+    colback=white!90!blue!5,
+    colframe=white!50,
+    colbacktitle=white!30!blue!20,
+    coltitle=black,
+    boxrule=0.5pt,
+    arc=4pt,
+    fuzzy shadow={0mm}{0mm}{0mm}{0.5mm}{white!60!blue},
+    overlay={\draw[white, line width=1pt] (frame.south west)--(frame.north east);},
+    enhanced,
+    borderline={0.5pt}{0mm}{white!80!blue},
+    borderline={0.5pt}{0.5mm}{white!50!blue},
+    #1
+}
+
+\newtcolorbox{techbox}[1][]{
+    title={\sffamily\small EXERCICE},
+    fonttitle=\bfseries\scshape,
+    colback=black!5!white,
+    colframe=cyan!70!black,
+    colbacktitle=black!80,
+    coltitle=cyan!50!white,
+    boxrule=0.8pt,
+    arc=1mm,
+    titlerule=1pt,
+    titlerule style={cyan!50!white},
+    enhanced,
+    overlay={
+        \draw[cyan!30, line width=0.5pt, dash pattern=on 2pt off 2pt] 
+            (frame.south west)--(frame.north east);
+    },
+    #1
+}
+
+\newtcolorbox{autobox}[2][]{
+    before title={\stepcounter{exercise}},
+    title=Exercice~\theexercise\ : \foreignlanguage{french}{#2},
+    colback=yellow!5,
+    colframe=red!50!black,
+    coltitle=red!70!black,
+    fonttitle=\bfseries,
+    attach title to upper,
+    before upper={\parindent15pt},
+    enhanced,
+    #1 % Additional tcolorbox options
+}
+

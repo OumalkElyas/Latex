@@ -1,0 +1,46 @@
+\input{config/preamble}
+\input{config/geometry}
+\input{config/tcolorbox}
+
+\begin{document}
+\input{content/cover}
+
+\begin{exambox}[title=Exercice 1 : Polymorphisme]
+    \begin{minted}{cpp}
+
+#include<iostream>
+
+int main(){
+    //read the README file
+    int a=1,b=2;
+    std::cout << a+b << std::endl;
+
+    return 0;
+}
+    \end{minted}
+\end{exambox}
+
+\begin{terminalbox}
+\textcolor{green}{oumalkelyas}:~\$ ./exo1
+
+4
+\end{terminalbox}
+
+\begin{commentbox}
+    \textcolor{red}{T}he result should be 3!!
+\end{commentbox}
+
+
+\begin{techbox}[title=Exercice 1 : DOM]
+    \begin{minted}{javascript}
+window.alert("Free Palestine");
+    \end{minted}
+\end{techbox}
+
+\begin{glassbox}[title=Exercice 2 : Polymorphisme]
+    \begin{minted}{py}
+print("read the README file")
+    \end{minted}
+\end{glassbox}
+
+\end{document}
