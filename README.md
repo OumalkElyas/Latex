@@ -28,8 +28,9 @@ cd main
 code main.tex
 
 # 6. Compile
-ctex
+ctex (vs code terminal or similar)
 
 # 7. View your PDF
 xdg-open main.pdf  # Linux
 open main.pdf      # macOS
+or your pdf reader
