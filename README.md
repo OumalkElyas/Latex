@@ -11,7 +11,7 @@ A minimalist and professional LaTeX template for academic assignments.
 
 ```bash
 # 1. Clone the repository
-git clone ....
+git clone https://github.com/OumalkElyas/Latex.git
 cd main
 
 # 2. Run initialization script
